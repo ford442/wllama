@@ -79,3 +79,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <App />
   //</React.StrictMode>,
 );
+
+// Call the WebGPU initialization and test after the app is rendered (or when the DOM is ready)
+document.addEventListener('DOMContentLoaded', async () => {
+    const webGPUSuccess = await initializeWebGPU(); // Call from the imported utility
+    if (webGPUSuccess) {
+        await testGELU();
+    }
+});
