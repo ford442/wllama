@@ -17,7 +17,6 @@
     "daisyui": "^4.12.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "webgpu": "latest",
     "@webgpu/types": "latest"
   },
   "devDependencies": {
