@@ -1,3 +1,5 @@
+// examples/main/src/utils/webgpu-utils.ts
+
 let gpuDevice: GPUDevice | null = null;
 let gpuAdapter: GPUAdapter | null = null;
 
@@ -78,7 +80,7 @@ export async function readGPUBuffer(buffer: GPUBuffer): Promise<Float32Array> {
 // GELU Shader and Pipeline
 const geluShaderWGSL = `
     @group(0) @binding(0) var<storage, read> input: array<f32>;
-    @group(0) @binding(1) var<storage, write> output: array<f32>;
+    @group(0) @binding(1) var<storage, read_write> output: array<f32>; // <--- CORRECTED LINE
 
     @compute @workgroup_size(64)
     fn main(@builtin(global_invocation_id) global_id: vec3<u32>) {
