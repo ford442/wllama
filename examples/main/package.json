@@ -17,12 +17,10 @@
     "daisyui": "^4.12.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "webgpu": "latest",
-    "@webgpu/types": "latest"
+    "webgpu": "latest"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
-    "@types/webgpu": "latest",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
